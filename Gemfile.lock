@@ -227,6 +227,7 @@ DEPENDENCIES
   material-sass (~> 4.1.1)
   material_icons
   pg (~> 0.21)
+  popper_js (~> 1.14.3)
   pry-byebug
   pry-rails
   puma
