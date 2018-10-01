@@ -1,9 +1,15 @@
-<h1><center>Posts</center></h1>
-<img class="card-img-top" src="https://picsum.photos/791/180/?random">
-<p>Uma descrição bonita sobre esse blog e todas as informações e vantagens que os cadastrados podem ter!</p>
-<p>Outras informações pertinentes</p>
-<div class="container-fluid">
-  <div class="row">
+
+<div class="card bg-dark text-white">
+  <img class="card-img" src="https://picsum.photos/791/280/?random">
+  <div class="card-img-overlay img-dark">
+    <h1 class="card-title justify-center">Tema do blog Ex.: Descomplicando o ERP</h1>
+    <p class="card-text">Uma descrição bonita sobre esse blog e todas as informações e vantagens que os cadastrados podem ter!</p>
+    <p class="card-text">Outras informações pertinentes</p>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row font-grey">
     <div class="col-8">
       <div class="card-columns">
         <% @posts.each do |post| %>
