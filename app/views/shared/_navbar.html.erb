@@ -6,17 +6,18 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right">
 
+    <%= link_to "Home", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Conteúdo", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Conteúdo", content_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
       <%= link_to destroy_user_session_path, class: "navbar-wagon-item navbar-wagon-link", method: :delete do %>
         <%= t(".sign_out", default: "Sair") %>
       <% end %>
     <% else %>
       <!-- Login link (when logged out) -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_in", default: "Cadastre-se"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
   </div>
 </div>
