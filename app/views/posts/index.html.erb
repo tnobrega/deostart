@@ -29,16 +29,11 @@
       </div>
     </div>
     <div class="col-3">
-      
-      <div class="card-deck exclusive-content">
+      <div class="card-deck">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Conteudo exclusivo:</h4>
-            <ul>
-              <li><%= link_to "Conteúdo 1", content_path %></li>
-              <li><%= link_to "Conteúdo 2", content_path %></li>
-              <li><%= link_to "Conteúdo 3", content_path %></li>
-            </ul>
+            <h5 class="card-title">Deixe seu contato e receba um e-mail com um conteúdo exclusivo</h5>
+            <%= render 'leadform', lead: @lead %>
           </div>
         </div>
       </div>
