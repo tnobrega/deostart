@@ -10,12 +10,12 @@
 
 <div class="container-fluid bg-grey">
   <div class="row font-grey">
-    <div class="col-8">
-      <div class="card-columns scroll">
+    <div class="col-9 scroll">
+      <div class="card-columns">
         <% @posts.each do |post| %>
           <%= link_to post do %>
             <div class="card">
-              <img class="card-img-top" src="https://picsum.photos/242/180/?random">
+              <img class="card-img-top" src="https://picsum.photos/242/120/?random">
               <div class="card-body">
                 <h5 class="card-title"><%= post.title %></h5>
                 <p class="card-text"><%= post.description %></p>
@@ -30,11 +30,18 @@
         <% end %>
       </div>
     </div>
-    <div class="col-4">
+    <div class="col-3">
       
-      <div class="card-deck">
+      <div class="card-deck exclusive-content">
         <div class="card">
-          <img class="card-img-top" src="https://picsum.photos/242/350/?random">
+          <div class="card-body">
+            <h4 class="card-title">Conteudo exclusivo:</h4>
+            <ul>
+              <li><%= link_to "Conteúdo 1", content_path %></li>
+              <li><%= link_to "Conteúdo 2", content_path %></li>
+              <li><%= link_to "Conteúdo 3", content_path %></li>
+            </ul>
+          </div>
         </div>
       </div>
 

@@ -29,6 +29,25 @@ body {
 }
 
 .scroll {
-  height:650px;
+  height:600px;
   overflow-y: scroll;
+}
+
+.exclusive-content {
+  background-color: #3F00B2;
+  font-family: 'Raleway', sans-serif;
+  min-height: 600px;
+  min-width: 242px
+}
+.exclusive-content {
+  .card {
+    background-color: #3F00B2;
+    color: #FFF200;
+    font-family: 'Raleway', sans-serif;
+    border: none;
+  }
+  a {
+    color: #FFF200;
+    font-family: 'Raleway', sans-serif;
+  }
 }
