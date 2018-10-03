@@ -21,6 +21,12 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'popper_js', '~> 1.14.3'
 
+gem 'firebase'
+
+gem 'dotenv-rails', groups: [:development, :test]
+
+
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
