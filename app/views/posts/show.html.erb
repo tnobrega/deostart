@@ -1,6 +1,11 @@
 <div class="container-fluid">
 	<div class="card">
-	  <img class="card-img-top" src="https://picsum.photos/791/180/?random">
+	  	<% if !@post.image.nil? %>
+	  	  <%= cl_image_tag @post.image, height: 300, width: '100%', class: "card-img-top" %>
+	  	<% else %>
+	  	  <img class="card-img-top" src="https://picsum.photos/791/180/?random">
+	  	<% end %>
+
 	  <div class="card-body">
 	    <h5 class="card-title"><%= @post.title %></h5>
 	    <p class="card-text"><%= @post.body.html_safe %></p>

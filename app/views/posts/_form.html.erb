@@ -8,6 +8,9 @@
     <%= f.input :description %>
     <%= f.input :body, :as => :ckeditor, input_html: { :rows => 20, :ckeditor => {:toolbar => 'Full'} } %>
     <%= f.input :keywords %>
+    <%= f.input :image %>
+    <%= cl_image_tag @post.image, height: 50 %>
+    <%= f.input :image_cache, as: :hidden %>
   </div>
 
   <div class="form-actions">
