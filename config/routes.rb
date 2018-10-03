@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  # resource :leads, only: [:index, :new, :create]
-  resources :leads
+  resource :leads, only: [:new, :create]
   resources :posts
   devise_for :users
   root to: 'posts#index'

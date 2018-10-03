@@ -1,12 +1,6 @@
 class LeadsController < ApplicationController
   before_action :set_lead, only: [:show, :edit, :update, :destroy]
-  skip_before_action :authenticate_user!, only: [:create, :show]
-
-  # GET /leads
-  # GET /leads.json
-  def index
-    @leads = Lead.all
-  end
+  skip_before_action :authenticate_user!, only: [:create, :new]
 
   # GET /leads/1
   # GET /leads/1.json
@@ -26,7 +20,9 @@ class LeadsController < ApplicationController
     @lead.ip = request.remote_ip
     respond_to do |format|
       if @lead.save
-        format.html { redirect_to root_path, notice: 'Você foi cadastrado com sucesso.' }
+        firebase = Firebase::Client.new(ENV['FIREBASE_URL'], ENV['FIREBASE_SECRET'])
+        response = firebase.push("leads", { id: @lead.id, name: @lead.name, last_name: @lead.last_name, email: @lead.email, ip: @lead.ip, created_at: @lead.created_at.to_s })
+        format.html { redirect_to content_path, notice: 'Parabéns, Esse é nosso conteúdo exclusivo.' }
       else
         format.html { render :new }
       end
@@ -41,6 +37,6 @@ class LeadsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def lead_params
-      params.require(:lead).permit(:name, :email, :ip)
+      params.require(:lead).permit(:name, :last_name, :email, :ip)
     end
 end
