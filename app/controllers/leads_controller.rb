@@ -3,7 +3,7 @@ class LeadsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:create, :new]
 
   def index
-    @lead = Lead.all
+    @leads = Lead.all
   end
 
   # GET /leads/1
