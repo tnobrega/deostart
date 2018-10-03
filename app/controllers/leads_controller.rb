@@ -28,7 +28,11 @@ class LeadsController < ApplicationController
         response = firebase.push("leads", { id: @lead.id, name: @lead.name, last_name: @lead.last_name, email: @lead.email, ip: @lead.ip, created_at: @lead.created_at.to_s })
         format.html { redirect_to content_path, notice: 'Parabéns, Esse é nosso conteúdo exclusivo.' }
       else
-        format.html { render :new }
+        if Lead.where(email:@lead.email).exists?
+          format.html { redirect_to content_path, notice: 'Esse email já está cadastrado!' }
+        else
+          format.html { render :new }
+        end
       end
     end
   end
