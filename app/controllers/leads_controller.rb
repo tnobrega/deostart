@@ -4,6 +4,11 @@ class LeadsController < ApplicationController
 
   def index
     @leads = Lead.all
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data @leads.to_csv, filename: "leads-#{Date.today}.csv" }
+    end
   end
 
   # GET /leads/1
@@ -26,7 +31,7 @@ class LeadsController < ApplicationController
       if @lead.save
         firebase = Firebase::Client.new(ENV['FIREBASE_URL'], ENV['FIREBASE_SECRET'])
         response = firebase.push("leads", { id: @lead.id, name: @lead.name, last_name: @lead.last_name, email: @lead.email, ip: @lead.ip, created_at: @lead.created_at.to_s })
-        format.html { redirect_to content_path, notice: 'Parabéns, Esse é nosso conteúdo exclusivo.' }
+        format.html { redirect_to content_path, notice: 'Parabéns! Esse é nosso conteúdo exclusivo.' }
       else
         if Lead.where(email:@lead.email).exists?
           format.html { redirect_to content_path, notice: 'Esse email já está cadastrado!' }

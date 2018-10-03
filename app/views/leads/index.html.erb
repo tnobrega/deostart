@@ -4,8 +4,9 @@
       <div class="card">
         <div class="card-body">
           <p><h1>We have: <%= @leads.all.count %> leads</h1></p>
+          <%= link_to 'Download CSV', show_me_the_leads_path(format: :csv), class: "btn btn-success" %>
           <br>
-
+          <br>
           <table>
             <thead>
               <tr>
