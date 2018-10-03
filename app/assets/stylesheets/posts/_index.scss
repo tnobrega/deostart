@@ -20,24 +20,10 @@ body {
   background-image: linear-gradient(-370deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.85) 50%);
 }
 
-.cd-280px {
-  max-width: 280px;
-}
-
-.height-250 {
-  height: 250px;
-}
-
-.scroll {
-  height:600px;
-  overflow-y: scroll;
-}
-
 .exclusive-content {
   background-color: #3F00B2;
   font-family: 'Raleway', sans-serif;
-  min-height: 600px;
-  min-width: 242px;
+
 }
 .exclusive-content {
   .card {
@@ -50,4 +36,8 @@ body {
     color: #FFF200;
     font-family: 'Raleway', sans-serif;
   }
+}
+
+.alert-danger{
+  color: #7c312f;
 }

@@ -1,12 +1,19 @@
 <div class="container-fluid">
-	<div class="card mb-3">
+	<div class="card">
 	  <img class="card-img-top" src="https://picsum.photos/791/180/?random">
 	  <div class="card-body">
 	    <h5 class="card-title"><%= @post.title %></h5>
 	    <p class="card-text"><%= @post.body %></p>
 	    <p class="card-text"><small class="text-muted"><%= @post.keywords %></small></p>
-	    <p class="card-text d-flex justify-content-center"><%= link_to 'Voltar', posts_path, class: "btn btn-primary" %></p>
 	  </div>
+	  <div class="card align-self-center" style="width: 20rem;">
+	      <div class="card-body">
+	        <h5 class="card-title">Deixe seu contato e acesse um conteúdo exclusivo</h5>
+	        <%= render 'leadform', lead: @lead %>
+	      </div>
+	  </div>
+	  <br><br>
+      <p class="card-text d-flex justify-content-center"><%= link_to 'Voltar', posts_path, class: "btn btn-primary" %></p>
 	</div>
 </div>
 

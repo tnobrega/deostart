@@ -8,8 +8,14 @@
 
 <div class="container-fluid bg-grey">
   <div class="row font-grey">
-    <div class="col-9 scroll">
+    <div class="col-12">
       <div class="card-columns">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Deixe seu contato e receba um e-mail com um conteúdo exclusivo</h5>
+            <%= render 'leadform', lead: @lead %>
+          </div>
+        </div>
         <% @posts.each do |post| %>
           <%= link_to post do %>
             <div class="card">
@@ -20,30 +26,13 @@
               </div>
               <div class="card-footer">
                 <small class="text-muted"><%= post.keywords %></small>
-                <% link_to 'Edit', edit_post_path(post) %>
-                <% link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
               </div>
             </div>
           <% end %>
         <% end %>
       </div>
     </div>
-    <div class="col-3">
-      <div class="card-deck">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Deixe seu contato e receba um e-mail com um conteúdo exclusivo</h5>
-            <%= render 'leadform', lead: @lead %>
-          </div>
-        </div>
-      </div>
-
-    </div>
   </div>
-
-
-
-
 
 </div>
 
