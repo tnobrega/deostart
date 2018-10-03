@@ -10,12 +10,14 @@
   <div class="row font-grey">
     <div class="col-12">
       <div class="card-columns">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Deixe seu contato e receba um e-mail com um conteúdo exclusivo</h5>
-            <%= render 'leadform', lead: @lead %>
+        <% if !user_signed_in? %>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Deixe seu contato e receba um e-mail com um conteúdo exclusivo</h5>
+              <%= render 'leadform', lead: @lead %>
+            </div>
           </div>
-        </div>
+        <% end %>
         <% @posts.each do |post| %>
           <%= link_to post do %>
             <div class="card">

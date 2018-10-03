@@ -1,6 +1,16 @@
-<h1>Editing Post</h1>
-
-<%= render 'form', post: @post %>
-
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+<div class="container-fluid">
+  <div class="row d-flex justify-content-center">
+    <div class="col-sm-10">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Editar Artigo</h2>
+          <%= render 'form', post: @post %>
+		  <br>
+		  <br>
+          <%= link_to 'Show', @post %> |
+          <%= link_to 'Back', posts_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
