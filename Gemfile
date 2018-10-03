@@ -25,7 +25,7 @@ gem 'firebase'
 
 gem 'dotenv-rails', groups: [:development, :test]
 
-
+gem 'ckeditor'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

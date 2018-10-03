@@ -3,7 +3,7 @@
 	  <img class="card-img-top" src="https://picsum.photos/791/180/?random">
 	  <div class="card-body">
 	    <h5 class="card-title"><%= @post.title %></h5>
-	    <p class="card-text"><%= @post.body %></p>
+	    <p class="card-text"><%= @post.body.html_safe %></p>
 	    <p class="card-text"><small class="text-muted"><%= @post.keywords %></small></p>
 	  </div>
 	  <% if !user_signed_in? %>
