@@ -21,6 +21,8 @@
 	  <% end %>
 	  <% if user_signed_in? %>
 	    <p class="card-text d-flex justify-content-center"><%= link_to 'Editar', edit_post_path(@post), class: "btn btn-secondary" %></p>
+	    <br>
+	    <p class="card-text d-flex justify-content-center"><%= link_to 'Apagar', @post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></p>
 	  <% end %>
 	  <br><br>
       <p class="card-text d-flex justify-content-center"><%= link_to 'Voltar', posts_path, class: "btn btn-primary" %></p>
