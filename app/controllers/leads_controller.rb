@@ -2,6 +2,10 @@ class LeadsController < ApplicationController
   before_action :set_lead, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:create, :new]
 
+  def index
+    @lead = Lead.all
+  end
+
   # GET /leads/1
   # GET /leads/1.json
   def show
