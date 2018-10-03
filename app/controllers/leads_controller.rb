@@ -25,7 +25,7 @@ class LeadsController < ApplicationController
     respond_to do |format|
       if @lead.save
         firebase = Firebase::Client.new(ENV['FIREBASE_URL'], ENV['FIREBASE_SECRET'])
-        response = firebase.push("leads", { id: @lead.id, name: @lead.name, last_name: @lead.last_name, email: @lead.email, ip: @lead.ip, created_at: @lead.created_at.to_s })
+        response = firebase.push("leads", { id: @lead.id, name: @lead.name, last_name: @lead.last_name, email: @lead.email, ip: @lead.ip, created_at: @lead.created_at.to_s }) unless Lead.where(email:@lead.email).exists?
         format.html { redirect_to content_path, notice: 'Parabéns, Esse é nosso conteúdo exclusivo.' }
       else
         if Lead.where(email:@lead.email).exists?
