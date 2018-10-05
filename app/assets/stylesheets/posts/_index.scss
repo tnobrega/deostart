@@ -14,6 +14,9 @@ body {
   a {
     color: #2A2B2A;
   }
+  a:hover {
+    color: #3B5998;
+  }
 }
 
 .img-dark{
@@ -44,4 +47,16 @@ body {
 
 .leads {
   overflow: auto;
+}
+
+.facebook{
+  a {
+    color: #FFF200;
+  }
+  a:hover {
+    color: #3B5998;
+  }
+  w:hover{
+    color: #FFF
+  }
 }
