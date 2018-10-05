@@ -3,6 +3,11 @@
   <%= link_to root_path, class: "navbar-wagon-brand navbar-wagon-link" do %>
     <%= image_tag "logo2.png" %> 
   <% end %>
+  <div class="facebook">
+    <%= link_to 'https://goo.gl/riQ4i5', class: "navbar-wagon-item navbar-wagon-link", target: '_blank' do %>
+      <i class="fab fa-facebook-square fa-2x"> Curta no Facebook</i>
+    <% end %>
+  </div>
   <!-- Right Navigation -->
   <div class="navbar-wagon-right">
 
@@ -21,6 +26,7 @@
     <% else %>
       <!-- Login link (when logged out) -->
     <% end %>
+    
   </div>
 </div>
 
