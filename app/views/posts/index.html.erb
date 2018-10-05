@@ -13,12 +13,18 @@
     <div class="col-12">
       <div class="card-columns">
         <% if !user_signed_in? %>
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Deixe seu contato e faça o download de nosso conteúdo exclusivo!</h5>
-              <%= render 'leadform', lead: @lead %>
+        <div class="modal fade" id="leadmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Deixe seu contato e acesse um conteúdo exclusivo</h5>
+              </div>
+              <div class="modal-body">
+                <%= render 'leadform', lead: @lead %>
+              </div>
             </div>
           </div>
+        </div>
         <% end %>
         <% @posts.each do |post| %>
           <%= link_to post do %>

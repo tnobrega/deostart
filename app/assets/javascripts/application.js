@@ -4,3 +4,7 @@
 //= require popper
 //= require bootstrap
 //= require ckeditor/init
+
+$(window).on('load',function(){
+        $('#leadmodal').modal('show');
+    });
