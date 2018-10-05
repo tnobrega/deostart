@@ -8,4 +8,8 @@ module MetaTagsHelper
     content_for?(:meta_title) ? content_for(:meta_title) : DEFAULT_META["meta_title"]
   end
 
+  def meta_keywords
+    content_for?(:meta_keywords) ? content_for(:meta_keywords) : DEFAULT_META["meta_keywords"]
+  end
+
 end
