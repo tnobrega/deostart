@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'posts#index'
 
+  get '/:id' , to: 'posts#show'
 
   get '/conteudo_extra', to: 'pages#content', as: 'content'
   get '/show_me_the_leads', to: 'leads#index', as: 'show_me_the_leads'
