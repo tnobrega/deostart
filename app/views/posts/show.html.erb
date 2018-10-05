@@ -5,11 +5,14 @@
 	  	<% else %>
 	  	  <img class="card-img-top" src="https://picsum.photos/791/180/?random">
 	  	<% end %>
-
 	  <div class="card-body">
 	    <h3 class="card-title"><%= @post.title %></h3>
 	    <p class="card-text"><%= @post.body.html_safe %></p>
-	    <p class="card-text"><small class="text-muted"><%= @post.keywords %></small></p>
+	    <p class="card-text"><small class="text-muted"><%= @post.keywords %></small>
+			<div class="float-right">
+			  <div class="fb-like" data-href="https://www.facebook.com/blogdeostart/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+			</div>
+	    </p>
 	  </div>
 	  <% if !user_signed_in? %>
 	  <div class="card align-self-center" style="width: 20rem;">
@@ -31,3 +34,13 @@
 
 
 
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.1&appId=270289256447800&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>

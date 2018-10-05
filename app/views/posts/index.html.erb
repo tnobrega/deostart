@@ -1,8 +1,10 @@
 
-<div class="card bg-dark text-white">
+<div class="card bg-grey text-white">
   <%= image_tag "banner-fullhd.png", width: '800px', height: '450px', class: "card-img"  %>
+  <div class="align-self-end">
+    <div class="fb-like" data-href="https://www.facebook.com/blogdeostart/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+  </div>
   <div class="card-img-overlay">
-
   </div>
 </div>
 
@@ -39,8 +41,15 @@
       </div>
     </div>
   </div>
-
 </div>
 
 
-<% link_to 'New Post', new_post_path %>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.1&appId=270289256447800&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
