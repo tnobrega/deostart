@@ -22,6 +22,7 @@ gem 'webpacker'
 gem 'popper_js', '~> 1.14.3'
 
 gem 'firebase'
+gem 'friendly_id', '~> 5.2.0'
 
 gem 'dotenv-rails', groups: [:development, :test]
 

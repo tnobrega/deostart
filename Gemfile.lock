@@ -102,6 +102,8 @@ GEM
       json
     font-awesome-sass (5.3.1)
       sassc (>= 1.11)
+    friendly_id (5.2.4)
+      activerecord (>= 4.0.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     googleauth (0.6.6)
@@ -288,6 +290,7 @@ DEPENDENCIES
   figaro
   firebase
   font-awesome-sass
+  friendly_id (~> 5.2.0)
   jbuilder (~> 2.0)
   jquery-rails
   listen (~> 3.0.5)
