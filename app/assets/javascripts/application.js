@@ -8,3 +8,4 @@
 $(window).on('load',function(){
         $('#leadmodal').modal('show');
     });
+

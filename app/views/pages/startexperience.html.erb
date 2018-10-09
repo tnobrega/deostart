@@ -4,10 +4,10 @@
 			<%= image_tag "start-xp.png", class: "navbar-wagon-brand xp-logo" %> 
 		</div>
 		<div class="col d-flex flex-row-reverse align-self-center social">
-			<%= link_to 'www.facebook.com', target: '_blank' do %>
+			<%= link_to 'https://www.facebook.com/blogdeostart/', target: '_blank' do %>
 			  <%= image_tag "facebook.png" %> 
 			<% end %>
-			<%= link_to 'www.linkedin.com', target: "_blank" do %>
+			<%= link_to 'https://www.linkedin.com/company/deostart/', target: "_blank" do %>
 			  <%= image_tag "linkedin.png" %>
 			<% end %>
 		</div>
@@ -67,7 +67,7 @@
 		</div>
 		<div class="col-md-3 col-sm-12 ">
 			<center>
-				<%= link_to "#" do %>
+				<%= link_to "https://www.linkedin.com/in/giulia-pedroni-de-andrade-611ab363" do %>
 					<%= image_tag "giuliapedroni.png" %>
 				<% end %>
 				<div class="title bold white">GIULIA PEDRONI</div>
@@ -98,9 +98,40 @@
 	<div class="row sxp align-items-center flex-column">
 		<div class="title bold">AS VAGAS SÃO LIMITADAS</div>
 		<div class="font-grey">Garanta sua inscrição!</div>
+	</div>
 
+	<div class="row align-items-center flex-row justify-content-around">
+		<div class="col-sm-12 col-md-2 time">
+		<center>				
+			<p id="day" class="numero"></p>
+			<p class="letras">DIAS</p>
+		</center>
+		</div>
+		<div class="col-sm-12 col-md-2 time">
+			<center>
+			<p id="hour" class="numero"></p>
+			<p class="letras">HORAS</p>
+		</center>
+		</div>
+		<div class="col-sm-12 col-md-2 time">
+			<center>
+			<p id="min" class="numero"></p>
+			<p class="letras">MINUTOS</p>
+		</center>
+		</div>
+		<div class="col-sm-12 col-md-2 time">
+			<center>
+			<p id="seg" class="numero"></p>
+			<p class="letras">SEGUNDOS</p>
+		</center>
+		</div>
+		
+	</div>
+	<center>
+	<div class="row sxp align-items-center flex-column"></div>
 		<%= link_to 'RESERVE SUA VAGA', "https://www.sympla.com.br/start-experience__377584", class: "btn btn-lblue", target: "_blank" %>
 	</div>
+	</center>
 </div>
 <div class="container-fluid map">
 	<div class="row sxp align-items-center flex-column">

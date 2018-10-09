@@ -162,3 +162,28 @@ flb{
   color: #FFF;
   font-size: 18px;
 }
+.time{
+  background-color: #2F3349;
+  color: #fff;
+}
+.numero{
+    border-bottom-color: $color-yellow;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    font-family: 'Raleway', sans-serif;
+    @include breakpoint(sm) {
+    font-size: 35px;
+    }
+    @include breakpoint(md) {
+    font-size: 90px;
+    }
+
+  }
+.letra{
+    color: #4F8BA2;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+  }
+.time-card{
+  padding: 0 5px 0 5px;
+}
