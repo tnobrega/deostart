@@ -151,7 +151,8 @@ flb{
 }
 .countdown{
   background-color: #FFF;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
+  padding-top: 30px;
 }
 .map{
   background-color: $color-darkblue;
@@ -186,4 +187,8 @@ flb{
   }
 .time-card{
   padding: 0 5px 0 5px;
+}
+.padding-top-b{
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
