@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :content, :privacy_policy]
+  skip_before_action :authenticate_user!, only: [:home, :content, :privacy_policy, :startexperience]
   def home
   end
 
@@ -7,5 +7,8 @@ class PagesController < ApplicationController
   end
 
   def privacy_policy
+  end
+
+  def startexperience
   end
 end

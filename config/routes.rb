@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root to: 'posts#index'
 
 
+  get '/startexperience', to: 'pages#startexperience', as: 'startexperience'
   get '/conteudo_extra', to: 'pages#content', as: 'content'
   get '/show_me_the_leads', to: 'leads#index', as: 'show_me_the_leads'
   get '/politica_privacidade', to: 'pages#privacy_policy', as: 'privacy_policy'

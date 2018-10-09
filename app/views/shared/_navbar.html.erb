@@ -11,6 +11,7 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right">
 
+    <%= link_to image_tag("start-xp.png"), startexperience_path, class: "navbar-wagon-item navbar-wagon-link xp" %>
     <%= link_to "Artigos", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% link_to "Conteúdo EXCLUSIVO", content_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to t(".teste", default: "Novo Post"), new_post_path, class: "navbar-wagon-item navbar-wagon-link" %>

@@ -1,0 +1,164 @@
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: 767px) { @content; }
+  }
+ 
+  @else if $class == sm {
+    @media (max-width: 995px) { @content; }
+  }
+ 
+  @else if $class == md {
+    @media (min-width: 996px) { @content; }
+  }
+ 
+  @else if $class == lg {
+    @media (min-width: 1200px) { @content; }
+  }
+ 
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
+}
+
+$color-darkblue: #2F3349;
+$color-yellow: #FFFF00;
+$color-lightblue: #4F8BA2;
+
+.bg-first{
+  background-image: url("back-xp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  color: #FFF
+}
+
+fdb{
+  color: $color-lightblue;
+}
+
+fy{
+  color: $color-yellow;
+}
+
+flb{
+  color: $color-lightblue;
+}
+
+.xp-logo{
+  height: 60px;
+  @include breakpoint(sm) {
+  padding-left: 10px;
+  }
+  @include breakpoint(md) {
+  padding-left: 50px;
+  }
+}
+
+.social{
+  img{
+    height: 30px;
+    margin: 0px 10px 0px 10px;
+  }
+  @include breakpoint(sm) {
+  padding-left: 10px;
+  }
+  @include breakpoint(md) {
+  padding-left: 50px;
+  }
+}
+
+.content{
+  flex-direction: column;
+  padding-top: 100px;
+
+}
+.sxp .title{
+  color:$color-lightblue;
+  border-bottom-color: $color-yellow;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  font-size: 25px;
+  font-family: 'Raleway', sans-serif;
+}
+.bold{
+  font-weight: bold;
+}
+.content .body{
+  font-weight: bold;
+  font-size: 45px;
+}
+.content .footer{
+  color:$color-lightblue;
+  font-size: 25px;
+  padding-top: 15px;
+}
+.btn-yellow{
+  background-color: $color-yellow;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+.btn-blue{
+  background-color: $color-darkblue;
+  border-radius: 20px;
+  margin-top: 15px;
+  color: #FFF
+}
+.btn-lblue{
+  background-color: $color-lightblue;
+  border-radius: 20px;
+  margin-top: 15px;
+  color: #FFF
+}
+.content a{
+    color: $color-lightblue;
+  }
+.content a:hover{
+    color: $color-darkblue;
+  }
+
+.bg-white{
+  background-color: #FFF;
+  color: #999;
+  padding-bottom: 30px;
+  // @include breakpoint(sm) {
+  // height: 300px;
+  // }
+  // @include breakpoint(lg) {
+  // height: 750px;
+  // }
+}
+.sxp .font-grey{
+  font-size: 15px;
+  padding-top: 20px;
+  color: #999;
+  font-family: 'Roboto', sans-serif;
+}
+.bg-white img{
+  width: 100%;
+}
+.bg-darkblue{
+  background-color: $color-darkblue;
+  padding-bottom: 30px;
+}
+.title w{
+  color: #FFF;
+}
+.guest {
+  padding-top: 50px;
+  img{
+    width: 50%;
+  }
+}
+.countdown{
+  background-color: #FFF;
+  padding-bottom: 30px;
+}
+.map{
+  background-color: $color-darkblue;
+  padding-bottom: 30px;
+}
+.local w{
+  font-family: 'Raleway', sans-serif;
+  color: #FFF;
+  font-size: 18px;
+}
